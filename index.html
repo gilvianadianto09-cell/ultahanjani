@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Mas ❤️</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe0ec, #fff5f7);
+    color: #8b3655;
+    text-align: center;
+    overflow-x: hidden;
+}
+header { padding: 60px 20px 30px; }
+header h1 { font-size: 42px; color: #d6336c; }
+header p { margin-top: 15px; font-size: 17px; }
+.container { max-width: 750px; margin: auto; padding: 20px; }
+.photo-frame {
+    background: white; padding: 15px; border-radius: 20px;
+    width: 280px; margin: 25px auto;
+    box-shadow: 0 8px 25px #d98aa655; transform: rotate(-2deg);
+}
+.photo-frame img {
+    width: 100%; height: 300px; object-fit: cover;
+    object-position: center 35%; border-radius: 12px;
+}
+.message {
+    background: white; padding: 30px; border-radius: 20px;
+    margin: 30px 0; box-shadow: 0 5px 20px #d98aa633;
+    line-height: 1.9;
+}
+.message h2 { color: #d6336c; margin-bottom: 20px; }
+button {
+    background: #e75480; color: white; border: none;
+    padding: 14px 28px; border-radius: 30px; font-size: 16px;
+    cursor: pointer; margin: 15px; transition: 0.3s;
+}
+button:hover { background: #c92d62; transform: scale(1.05); }
+#surprise {
+    display: none; background: #fff0f5; padding: 25px;
+    border-radius: 20px; margin-top: 20px; line-height: 1.8;
+}
+footer { padding: 30px; color: #b34c72; }
+.heart {
+    position: fixed; bottom: -30px; font-size: 22px;
+    animation: naik 6s linear infinite; pointer-events: none; z-index: -1;
+}
+@keyframes naik {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+@media (max-width: 480px) {
+    header h1 { font-size: 34px; }
+    .photo-frame { width: min(280px, 85vw); }
+    .photo-frame img { height: 320px; }
+    .message { padding: 22px; }
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>🎂 Happy Birthday ❤️</h1>
+    <p>Sri Devi Anjani</p>
+</header>
+
+<div class="container">
+    <h2>Selamat datang di 20 sayang ❤️</h2>
+
+    <div class="photo-frame">
+        <img id="foto" src="c:\Users\ASUS\Pictures\441ab1ee-1db3-461a-82f4-dc5b55fb05a5.jpg" alt="Foto pasangan">
+    </div>
+
+    <div class="message">
+        <h2>Selamat Ulang Tahun! 💗</h2>
+        <p>Happy birthday wanita yang begitu istimewa.
+        Hari ini adalah hari yang spesial karena seseorang yang berharga telah bertambah usia.</p>
+        <br>
+        <p>Semoga di usia yang baru ini, semua harapan dan impian adek perlahan bisa menjadi kenyataan.
+        Semoga selalu diberikan kesehatan, kebahagiaan, kelancaran dalam setiap urusan,
+        dan dikelilingi orang-orang yang tulus menyayangi adek.</p>
+        <br>
+        <p>Terima kasih sudah menjadi bagian dari cerita yang indah.
+        Semoga setiap hari membawa alasan baru untuk tersenyum dan selalu ada hal baik
+        yang menanti adek di depan.</p>
+        <br>
+        <p>Jangan pernah berhenti menjadi diri sendiri. Tetap semangat mengejar semua impian.
+        Semoga tahun ini menjadi salah satu tahun terbaik dalam hidup adek.</p>
+        <br>
+        <h3>Once Again, Happy Birthday! ❤️🎂</h3>
+    </div>
+
+    
+    <button onclick="window.location.href='galeri.html'">📸 Buka Galeri Kenangan ❤️</button>
+
+    <button onclick="bukaSurprise()">Buka Pesan Spesial 💌</button>
+
+    <div id="surprise">
+        <h2>💗 A Little Message For You 💗</h2>
+        <p>Di antara banyaknya hal indah di dunia, semoga adek selalu menemukan kebahagiaan
+        dalam hal-hal sederhana.</p>
+        <br>
+        <p>Semoga semua perjalanan adek ke depan dipenuhi cerita indah, kesempatan baik,
+        dan kenangan yang layak untuk disimpan.</p>
+        <br>
+        <p>Dan semoga di tahun ini adek bisa lebih dewasa dalam pola pikir,sikap,dan etika.Bisa lebih menghargai orang tua serta diri mas
+            yang bakal selalu ada untuk adek.Harapan dan doa mas tahun ini hanya itu,mas harap adek sehat terus,tetap sayang sama mas sampai
+            kapanpun.</p>
+        <br>
+            <p>Mungkin hadiah dari mas tidak semewah apa yang adek harapkan,namun hadiah yang mas siapkan untuk adek mas usahakan 
+                se spesial mungkin dan sebagus mungkin agar adek sukai.Terimaksih untuk perjalan yang panjang ini,semoga tahun berikut nya 
+                kita masih bisa membuat cerita indah yang kita impikan itu.Mas sayang sama adek 
+            </p>
+        <br>
+        <h3>I LOVE YOU SAYANG ❤️</h3>
+    </div>
+</div>
+
+<footer>
+    Dibuat dengan penuh kasih ❤️
+    <br>
+    © Mas Pacar Tersayang
+</footer>
+
+<script>
+function bukaSurprise() {
+    const pesan = document.getElementById("surprise");
+    pesan.style.display = "block";
+    pesan.scrollIntoView({ behavior: "smooth" });
+}
+
+function buatHati() {
+    const hati = document.createElement("div");
+    hati.className = "heart";
+    hati.innerHTML = "❤️";
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.body.appendChild(hati);
+    setTimeout(() => hati.remove(), 8000);
+}
+setInterval(buatHati, 600);
+</script>
+</body>
+</html>

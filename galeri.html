@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Sweet Memories ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #71384e;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe2ed, #fff7fa, #f9e4ee);
+    overflow-x: hidden;
+}
+
+header {
+    padding: 55px 20px 25px;
+}
+
+.eyebrow {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #b66b86;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: clamp(34px, 6vw, 52px);
+    color: #b83f70;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #986078;
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: auto;
+}
+
+.intro {
+    max-width: 680px;
+    margin: 20px auto 35px;
+    padding: 25px;
+    background: #ffffffd9;
+    border-radius: 20px;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px #a94f7020;
+}
+
+.intro strong {
+    color: #bd4775;
+}
+
+/* TATA LETAK ENAM FOTO */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 35px auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #81435b25;
+    border: 1px solid #f4dce5;
+    transition: .3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px #81435b35;
+}
+
+.photo-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, #fce2ec, #fff1f6);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.placeholder {
+    color: #bd7190;
+    font-size: 45px;
+}
+
+.photo-title {
+    font-family: Georgia, serif;
+    color: #a64f72;
+    margin: 15px 0 12px;
+    font-size: 17px;
+}
+
+.photo-card input {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 9px 17px;
+    background: #d95d8b;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.upload-btn:hover {
+    background: #b83f70;
+}
+
+.status {
+    font-size: 12px;
+    color: #a66b83;
+    margin-top: 9px;
+}
+
+.quote {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #a84370;
+    margin: 45px auto 25px;
+    max-width: 650px;
+}
+
+button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #d95d8b;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+}
+
+button:hover {
+    background: #b83f70;
+}
+
+.back {
+    background: #966078;
+    margin-bottom: 40px;
+}
+
+footer {
+    padding: 25px;
+    color: #a36a80;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 760px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media(max-width: 420px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        max-width: 330px;
+    }
+}
+
+/* ANIMASI HATI */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #d77b9d;
+    pointer-events: none;
+    animation: naik 7s linear forwards;
+    z-index: -1;
+}
+
+@keyframes naik {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: .8;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="eyebrow">A LITTLE COLLECTION OF US</div>
+    <h1>Our Sweet Memories ♡</h1>
+    <p class="subtitle">
+        Setiap foto punya cerita, setiap cerita punya tempat di hati.
+    </p>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <p>Untuk <strong>Sri Devi Anjani ❤️</strong></p>
+        <p>
+            Halaman kecil ini dibuat untuk menyimpan
+            momen-momen berharga kita.
+            Enam foto ini mungkin hanya sebagian kecil
+            dari perjalanan yang telah kita lalui,
+            tetapi setiap kenangan akan selalu punya
+            tempat tersendiri.
+        </p>
+    </section>
+
+    <!-- GALERI 6 FOTO -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="photo-card" data-slot="1">
+            <div class="photo-box">
+                <span class="placeholder">♡</span>
+                <img alt="Kenangan 1">
+            </div>
+            <h3 class="photo-title">Our First Memory</h3>
+            <label class="upload-btn" for="foto1">Pilih Foto</label>
+            <input type="file" id="foto1" accept="image/*">
+            <p class="status">Kenangan pertama ❤️</p>
+        </div>
+
+        <div class="photo-card" data-slot="2">
+            <div class="photo-box">
+                <span class="placeholder">♡</span>
+                <img alt="Kenangan 2">
+            </div>
+            <h3 class="photo-title">Beautiful Moment</h3>
+            <label class="upload-btn" for="foto2">Pilih Foto</label>
+            <input type="file" id="foto2" accept="image/*">
+            <p class="status">Momen indah kita ❤️</p>
+        </div>
+
+        <div class="photo-card" data-slot="3">
+            <div class="photo-box">
+                <span class="placeholder">♡</span>
+                <img alt="Kenangan 3">
+            </div>
+            <h3 class="photo-title">Sweet Together</h3>
+            <label class="upload-btn" for="foto3">Pilih Foto</label>
+            <input type="file" id="foto3" accept="image/*">
+            <p class="status">Cerita bersama ❤️</p>
+        </div>
+
+        <div class="photo-card" data-slot="4">
+            <div class="photo-box">
+                <span class="placeholder">♡</span>
+                <img alt="Kenangan 4">
+            </div>
+            <h3 class="photo-title">Lovely Day</h3>
+            <label class="upload-btn" for="foto4">Pilih Foto</label>
+            <input type="file" id="foto4" accept="image/*">
+            <p class="status">Hari yang istimewa ❤️</p>
+        </div>
+
+        <div class="photo-card" data-slot="5">
+            <div class="photo-box">
+                <span class="placeholder">♡</span>
+                <img alt="Kenangan 5">
+            </div>
+            <h3 class="photo-title">Forever Memory</h3>
+            <label class="upload-btn" for="foto5">Pilih Foto</label>
+            <input type="file" id="foto5" accept="image/*">
+            <p class="status">Kenangan selamanya ❤️</p>
+        </div>
+
+        <div class="photo-card" data-slot="6">
+            <div class="photo-box">
+                <span class="placeholder">♡</span>
+                <img alt="Kenangan 6">
+            </div>
+            <h3 class="photo-title">Our Story</h3>
+            <label class="upload-btn" for="foto6">Pilih Foto</label>
+            <input type="file" id="foto6" accept="image/*">
+            <p class="status">Cerita kita ❤️</p>
+        </div>
+
+    </section>
+
+    <p class="quote">
+        "Bukan tentang seberapa sempurna sebuah momen,
+        tetapi tentang siapa yang membuatnya terasa istimewa." ❤️
+    </p>
+
+    <button class="back"
+        onclick="window.location.href='ulang_tahun_dengan_galeri.html'">
+        ← Kembali ke Halaman Ulang Tahun
+    </button>
+
+</main>
+
+<footer>
+    Dibuat dengan sepenuh hati untuk Sri Devi Anjani ♡
+</footer>
+
+<script>
+
+// ==================================
+// MEMBUAT DATABASE INDEXEDDB
+// ==================================
+
+let db;
+
+const request = indexedDB.open("GaleriKenanganAnjani", 1);
+
+request.onupgradeneeded = function(event) {
+    db = event.target.result;
+
+    if (!db.objectStoreNames.contains("foto")) {
+        db.createObjectStore("foto", {
+            keyPath: "id"
+        });
+    }
+};
+
+request.onsuccess = function(event) {
+    db = event.target.result;
+
+    // Menampilkan foto yang sudah tersimpan
+    tampilkanSemuaFoto();
+};
+
+request.onerror = function() {
+    alert("Database tidak dapat dibuka!");
+};
+
+// ==================================
+// MENYIMPAN FOTO
+// ==================================
+
+function simpanFoto(id, file) {
+
+    const transaction = db.transaction(
+        ["foto"], "readwrite"
+    );
+
+    const store = transaction.objectStore("foto");
+
+    store.put({
+        id: id,
+        gambar: file,
+        nama: file.name
+    });
+
+    transaction.oncomplete = function() {
+        tampilkanFoto(id);
+    };
+
+    transaction.onerror = function() {
+        alert("Foto gagal disimpan!");
+    };
+}
+
+// ==================================
+// MENAMPILKAN SATU FOTO
+// ==================================
+
+function tampilkanFoto(id) {
+
+    const transaction = db.transaction(
+        ["foto"], "readonly"
+    );
+
+    const store = transaction.objectStore("foto");
+
+    const request = store.get(id);
+
+    request.onsuccess = function() {
+
+        if (!request.result) return;
+
+        const data = request.result;
+
+        const card = document.querySelector(
+            `.photo-card[data-slot="${id}"]`
+        );
+
+        const img = card.querySelector("img");
+        const placeholder = card.querySelector(".placeholder");
+        const status = card.querySelector(".status");
+
+        // Membaca gambar dari database
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            img.src = e.target.result;
+            img.style.display = "block";
+            placeholder.style.display = "none";
+            status.textContent = "✓ Foto tersimpan ❤️";
+        };
+
+        reader.readAsDataURL(data.gambar);
+    };
+}
+
+// ==================================
+// MENAMPILKAN SEMUA FOTO
+// SAAT WEBSITE DIBUKA KEMBALI
+// ==================================
+
+function tampilkanSemuaFoto() {
+
+    for (let i = 1; i <= 6; i++) {
+        tampilkanFoto(i);
+    }
+}
+
+// ==================================
+// MENGUNGGAH FOTO KE SETIAP SLOT
+// ==================================
+
+for (let i = 1; i <= 6; i++) {
+
+    const input = document.getElementById("foto" + i);
+
+    input.addEventListener("change", function(event) {
+
+        const file = event.target.files[0];
+
+        if (!file) return;
+
+        if (!file.type.startsWith("image/")) {
+            alert("Silakan pilih file gambar!");
+            return;
+        }
+
+        if (!db) {
+            alert("Database belum siap. Coba kembali sebentar lagi.");
+            return;
+        }
+
+        // Simpan berdasarkan nomor slot
+        simpanFoto(i, file);
+
+        // Reset input agar foto yang sama bisa dipilih ulang
+        input.value = "";
+    });
+}
+
+// ==================================
+// ANIMASI HATI
+// ==================================
+
+function buatHati() {
+
+    const hati = document.createElement("span");
+
+    hati.className = "heart";
+    hati.textContent = ["♡", "♥", "💕"][
+        Math.floor(Math.random() * 3)
+    ];
+
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.fontSize = (14 + Math.random() * 15) + "px";
+
+    document.body.appendChild(hati);
+
+    setTimeout(() => hati.remove(), 8000);
+}
+
+setInterval(buatHati, 1000);
+
+</script>
+
+</body>
+</html>
